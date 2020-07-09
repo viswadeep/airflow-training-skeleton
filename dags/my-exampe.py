@@ -36,7 +36,7 @@ dag = DAG(
     default_args=args,
     schedule_interval='0 0 * * *',
     dagrun_timeout=timedelta(minutes=60),
-    schedule_interval="@daily"
+    schedule_interval="@daily",
 )
 
 task1 = DummyOperator(task_id="task1", dag=dag)
